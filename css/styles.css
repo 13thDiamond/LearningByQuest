@@ -1,0 +1,174 @@
+body{
+    background-color: #7e7e7e;
+    
+}
+
+.display_section {
+    display: flex;
+    background-color: #642800;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 3em;
+    padding: 1.75rem
+  }
+
+.card_section{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #2b5000;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1;
+  }
+  .card_section:hover{
+    background-color: #607a00;
+  }
+
+.card_cont_img{
+    justify-content: center;
+    align-items: center;
+
+}
+h2.card_cont_head{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+
+}
+.card_cont_head{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 1.35em;
+    padding: .5em 0em 0.5em 0em;
+    margin: 0em 0em 0em 0em;
+}
+.card_cont_text_box{
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f1f1f;
+    font-size: 18px;
+    padding: 2px 2px 2px 2px;
+    background-color: #c5c5c5;
+    border-radius: 8px;
+}
+
+.head_sub_prodcat{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 0.75em;
+    text-align: center;
+
+}
+
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-style: bold;
+    background-color: #2f6d1c;
+    padding: 1rem;
+    margin: 0.25rem;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1;
+    height: 25px;
+    transition-duration: 3s;
+}
+
+.webpage_header_title{
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em 0px 1em 0px;
+    background-color: #2b5000;
+    border-radius: 8px;
+    margin: 0px 0px 2em 0px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #642800;
+    padding: 1em;
+    border-radius: 8px;
+    margin-top: 2em;
+}
+.form h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 1.35em;
+    text-align: center;
+    padding: .5em 0em 0.5em 0em;
+}
+
+#body_complain_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b5000;
+    width: 100%;
+}
+.body_complain_form_response{
+    margin-top: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 1.2em;
+    background-color: #c5c5c5;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+@media (max-width: 400px) {
+    .display_section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card_section {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .webpage_header_title{
+        font-size: 1.5em;
+    }
+    button.contact_btn{
+        font-size: 20px;
+    }
+}
+
+.hidden {
+  display: none;
+}
+#modalOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+#modalBox {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+#modalClose {
+  position: absolute;
+  top: 0.5em;
+  right: 0.75em;
+  cursor: pointer;
+  font-size: 1.5em;
+}
