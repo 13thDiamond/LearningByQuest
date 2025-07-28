@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded",function() {
             const product = this.id;
             const default_text = "Mehr Erfahren";
             const infoDiv = this.querySelector('.infoCard');
+            if(!infoDiv) return;
             if (infoDiv.innerText === infos[product]) {
                 infoDiv.innerText = default_text;
             } else {
@@ -39,46 +40,48 @@ document.addEventListener("DOMContentLoaded",function() {
     const ProdDetails = {
         "kamille": {
             title: "Kamille",
-            image: "images/kamille.jpg",
+            image: "../pics/kamill.png",
             text: "Kamille ist bekannt für ihre beruhigenden Eigenschaften und wird häufig bei innerer Unruhe eingesetzt."
             },
         "loewenzahn": {
             title:"Löwenzahn",
-            image: "images/loewenzahn.jpg",
+            image: "../pics/loewe.png",
             text: "Löwenzahn ist ein vielseitiges Kraut, das die Verdauung anregt und den Stoffwechsel stärkt."
             },
         "salbei": {
             title: "Salbei",
-            image: "images/salbei.jpg",
+            image: "../pics/salba.png",
             text: "Salbei hat entzündungshemmende Eigenschaften und ist besonders gut für die Mundhygiene geeignet."
             }
     };
 
 
-    document.querySelectorAll('.infoCard').forEach(card => {
+    document.querySelectorAll('.infoCardModal').forEach(card => {
         card.addEventListener('click', function(event) {
             event.stopPropagation(); // Verhindert, dass das Click-Event zum übergeordneten Element weitergeleitet wird
             const id = this.closest('.card_section').id; // Zugriff auf das übergeordnete Element (die Karte)
-            const details = ProdDetails[id];
-            if (details) {
-                document.getElementById("product_title").innerText = details.title;
-                document.getElementById("product_image").src = details.image;
-                document.getElementById("product_text").innerText = details.text;
+            const info = ProdDetails[id];
+            
+            document.getElementById("infoBoxTitle").innerText = info.title;
+            document.getElementById("infoBoxImg").src = info.image;
+            document.getElementById("infoBoxText").innerText =info.text;
                 
-                document.getElementById("infoOverlay").classList.remove("hidden");
-            }
+            document.getElementById("infoModal").classList.remove("hidden");
         });
     });
 
-    document.getElementById("closeOverlay").addEventListener("click", function() {
-        document.getElementById("infoOverlay").classList.add("hidden");
+    document.getElementById("infoBoxClose").addEventListener("click", function() {
+        document.getElementById("infoModal").classList.add("hidden");
     });
 
-    document.getElementById("infoOverlay").addEventListener("click", function(e) {
+    document.getElementById("infoModal").addEventListener("click", function(e) {
         if (e.target === this) { // Überprüfen, ob der Klick auf das Overlay selbst war
             this.classList.add("hidden");
         }
     });
 
 });
+//# sourceMappingURL=handler.js.map
+
+
 
