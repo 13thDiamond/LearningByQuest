@@ -9,12 +9,24 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-      <nav id="mainNav">
-        <button data-target="home" href="#" src="../pics/dk-logo.png"></button> <!-- Home Button bearbeiten-->
-        <button data-target="kraeuter">Kräuter</button>
-        <button data-target="rezepte">Rezepte</button>
-        <button data-target="wissen">Heilwissen</button>
-      </nav>
+    <header class="header">
+      <div class="header_container">
+        <a id="head_logo" href="#"><img class="nav-item-logo" src="/pics/dk-logo.png" alt="Logo des Kraeutersheimat"></a>
+        <nav id="mainNav">
+          <!-- <button data-target="home" href="#" src="../pics/dk-logo.png"></button> <!-- Home Button bearbeiten-->
+          <!-- <button data-target="kraeuter">Kräuter</button>
+                <button data-target="rezepte">Rezepte</button>
+                <button data-target="wissen">Heilwissen</button> -->
+    
+    
+          <a class="nav-item"><span>Kräuter</span></a>
+          <a class="nav-item"><span>Rezepte</span></a>
+          <a class="nav-item"><span>Käuterlexikon</span></a>
+          <a class="nav-item"><span>Über uns</span></a>
+        </nav>
+      </div>
+    </header>
+
 
       <section id="kraeuter" class="hidden">
         <h2>Kräuter</h2>
@@ -30,7 +42,7 @@
       </section>
 
 
-    <div class="webpage_header_title"><h1>Willkommen im Kräuterwald</h1></div>
+    <div class="webpage_head_title"><h1>Willkommen im Kräuterwald</h1></div>
 
     <div class="display_section">
       <div class="card_section" id="loewenzahn">
