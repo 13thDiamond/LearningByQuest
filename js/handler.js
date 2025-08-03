@@ -1,3 +1,5 @@
+import {setupNavigation} from "./navigation.js";
+
 document.addEventListener("DOMContentLoaded",function() {
     const infos = {
         "kamille": "Kamille hilft bei innerer Unruhe und wirkt beruhigend.",
@@ -79,6 +81,8 @@ document.addEventListener("DOMContentLoaded",function() {
             this.classList.add("hidden");
         }
     });
+
+    setupNavigation();
 
 });
 //# sourceMappingURL=handler.js.map

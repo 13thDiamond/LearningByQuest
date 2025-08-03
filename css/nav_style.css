@@ -1,0 +1,40 @@
+
+#mainNav {
+  display: flex;
+  justify-content: center;
+  background: #2b5000;
+  padding: 1em 0;
+  gap: 1em;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#mainNav button {
+  background: #c5c5c5;
+  color: #2b5000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+#mainNav button:hover, #mainNav button.active {
+  background: #607a00;
+  color: #fff;
+}
+
+section {
+  max-width: 700px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2em;
+  font-size: 1.1em;
+}
+
+.hidden {
+  display: none;
+}

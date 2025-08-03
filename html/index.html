@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--<script src="../js/questtwo.js" crossorigin="anonymous"></script>-->
-    <script src="../js/handler.js" crossorigin="anonymous"></script>
+    <script type="module" src="../js/handler.js" crossorigin="anonymous"></script>
     <title>Des Kräutersheimat</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+      <nav id="mainNav">
+        <button data-target="home" href="#" src="../pics/dk-logo.png"></button> <!-- Home Button bearbeiten-->
+        <button data-target="kraeuter">Kräuter</button>
+        <button data-target="rezepte">Rezepte</button>
+        <button data-target="wissen">Heilwissen</button>
+      </nav>
+
+      <section id="kraeuter" class="hidden">
+        <h2>Kräuter</h2>
+        <p>Hier findest du Informationen zu verschiedenen Kräutern.</p>
+      </section>
+      <section id="rezepte" class="hidden">
+        <h2>Rezepte</h2>
+        <p>Hier findest du nützliche Rezepte mit Kräutern.</p>
+      </section>
+      <section id="wissen" class="hidden">
+        <h2>Heilwissen</h2>
+        <p>Hier findest du wissenswerte Informationen über Heilpflanzen.</p>
+      </section>
+
+
     <div class="webpage_header_title"><h1>Willkommen im Kräuterwald</h1></div>
 
     <div class="display_section">
