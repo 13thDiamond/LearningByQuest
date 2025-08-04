@@ -1,4 +1,5 @@
 import {setupNavigation} from "./navigation.js";
+import {yearSpan} from "./year.js";
 
 document.addEventListener("DOMContentLoaded",function() {
     const infos = {
@@ -83,6 +84,7 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 
     setupNavigation();
+    yearSpan();
 
 });
 //# sourceMappingURL=handler.js.map
