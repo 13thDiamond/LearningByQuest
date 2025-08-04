@@ -11,9 +11,13 @@
   max-width: 1350px;
   margin: 0 auto;
 }
-#copyright {
+.copyright {
   color: #c5c5c5;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   text-align: center;
+}
+#spanYear {
+  color: #fff;
+  font-weight: bold;
 }
