@@ -1,19 +1,20 @@
 export function setupNavigation() {
-  const navButtons = document.querySelectorAll('#mainNav button');
-  const sections = document.querySelectorAll('section');
+  const navButtons = document.querySelectorAll('#mainNav a.nav-item');
 
-  navButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
-      sections.forEach(sec => {
+   navButtons.forEach( n=> {
+    n.addEventListener('click', () => {
+      const target = n.dataset.target;
+      navButtons.forEach(sec => {
         if (sec.id === target) {
-          sec.classList.remove('hidden');
+          sec.classList.add('activeItem');
         } else {
-          sec.classList.add('hidden');
+          sec.classList.remove('activeItem');
         }
       });
     });
   });
+
+
 }
 
 

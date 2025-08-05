@@ -37,11 +37,17 @@
   align-items: center;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:focus {
   background: #607a00;
   color: #fff;
 }
 
 .nav-item span {
   pointer-events: none;
+}
+
+.activeItem {
+  background: #607a00;
+  color: #fff;
 }
