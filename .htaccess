@@ -1,0 +1,9 @@
+RewriteEngine On
+
+DirectoryIndex index.html
+
+RewriteRule ^home$ /index.html [L]
+RewriteRule ^product$ /product.html [L]
+RewriteRule ^recipes$ /recipes.html [L]
+RewriteRule ^lexica$ /encyclopedia.html [L]
+RewriteRule ^ueber_uns$ /about_us.html [L]
