@@ -11,14 +11,25 @@
   <body>
     <header class="header">
       <div class="header_container">
-        <a id="head_logo" href="/home"><img class="nav-item-logo" src="/pics/dk-logo.png" alt="Logo des Kraeutersheimat"></a>
-            <nav id="mainNav">
-            <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
-            <a data-target="recipes"class="nav-item" href="/recipes"><span>Rezepte</span></a>
-            <a data-target="lexica"class="nav-item" href="/lexica"><span>Käuterlexikon</span></a>
-            <a data-target="ueber_uns"class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
-            </nav>
+        <a id="head_logo" href="/home">
+          <img class="nav-item-logo" src="/pics/dk-logo.png" alt="Logo des Kraeutersheimat">
+        </a>
+        <nav class="header_nav_desktop">
+          <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
+          <a data-target="recipes" class="nav-item" href="/recipes"><span>Rezepte</span></a>
+          <a data-target="lexica" class="nav-item" href="/lexica"><span>Käuterlexikon</span></a>
+          <a data-target="ueber_uns" class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
+        </nav>
+        <button type="button" class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+      <nav class="header_nav_mobile" id="mobileNav">
+        <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
+        <a data-target="recipes" class="nav-item" href="/recipes"><span>Rezepte</span></a>
+        <a data-target="lexica" class="nav-item" href="/lexica"><span>Kräuterlexikon</span></a>
+        <a data-target="ueber_uns" class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
+      </nav>
     </header>
     <footer class="footer">
       <div class="footer_container">

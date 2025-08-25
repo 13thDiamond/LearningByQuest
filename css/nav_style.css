@@ -6,11 +6,9 @@
 
 .header_container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 0 1em;
+  align-items: center;
+  padding: 1rem;
 }
 
 #head_logo img.nav-item-logo {
@@ -19,7 +17,7 @@
   align-content: center;
 }
 
-#mainNav {
+.mainNav n {
   display: flex;
   gap: 1em;
 }
@@ -29,25 +27,96 @@
   color: #2b5000;
   border-radius: 6px;
   padding: 0.5em 1.2em;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
   display: flex;
   align-items: center;
 }
 
-.nav-item:hover,
-.nav-item:focus {
+.nav-item:hover {
   background: #607a00;
   color: #fff;
 }
 
-.nav-item span {
-  pointer-events: none;
+/* Standard: beide Navs ausgeblendet (wird per Media-Query sichtbar) */
+.header_nav_desktop {
+  display: none;
 }
 
-.activeItem {
+.header_nav_mobile {
+  display: none;
+}
+
+.burger {
+  display: none;
+  z-index: 200; /* sicherstellen, dass Button oben liegt */
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .burger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #c5c5c5;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .header_nav_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background: #2b5000;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 150;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+  .header_nav_mobile.open {
+    max-height: 400px;
+  }
+  .header_nav_mobile .nav-item {
+    justify-content: flex-start;
+    padding: 1em 2em;
+    font-size: 1.1em;
+  }
+  .header_nav_desktop {
+    display: none;
+  }
+}
+
+/* Desktop (>=769px) */
+@media (min-width: 769px) {
+  .header_nav_desktop {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .burger,
+  .header_nav_mobile {
+    display: none;
+  }
+}
+
+/* Aktives Item */
+.nav-item.activeItem {
   background: #607a00;
-  color: #fff;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  outline: 2px solid rgba(255,255,255,0.06);
 }

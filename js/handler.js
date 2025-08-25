@@ -1,10 +1,12 @@
 import {setupNavigation} from "./navigation.js";
 import {yearSpan} from "./year.js";
 
-setupNavigation();
-yearSpan();
+// entferne direkten Aufruf hier und starte erst nach DOM ready
+document.addEventListener("DOMContentLoaded", function() {
+    setupNavigation();
+    yearSpan();
 
-document.addEventListener("DOMContentLoaded",function() {
+
     const infos = {
         "kamille": "Kamille hilft bei innerer Unruhe und wirkt beruhigend.",
         "loewenzahn": "Löwenzahn regt die Verdauung an und stärkt den Stoffwechsel",

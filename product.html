@@ -11,29 +11,28 @@
   <body>
     <header class="header">
       <div class="header_container">
-        <a id="head_logo" href="/home"><img class="nav-item-logo" src="/pics/dk-logo.png" alt="Logo des Kraeutersheimat"></a>
-        <nav id="mainNav">
-            <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
-            <a data-target="recipes"class="nav-item" href="/recipes"><span>Rezepte</span></a>
-            <a data-target="lexica"class="nav-item" href="/lexica"><span>Käuterlexikon</span></a>
-            <a data-target="ueber_uns"class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
+        <a id="head_logo" href="/home">
+          <img class="nav-item-logo" src="/pics/dk-logo.png" alt="Logo des Kraeutersheimat">
+        </a>
+        <nav class="header_nav_desktop">
+          <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
+          <a data-target="recipes" class="nav-item" href="/recipes"><span>Rezepte</span></a>
+          <a data-target="lexica" class="nav-item" href="/lexica"><span>Käuterlexikon</span></a>
+          <a data-target="ueber_uns" class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
         </nav>
+        <button type="button" class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+      <nav class="header_nav_mobile" id="mobileNav">
+        <a data-target="kraeuter" class="nav-item" href="/product"><span>Kräuter</span></a>
+        <a data-target="recipes" class="nav-item" href="/recipes"><span>Rezepte</span></a>
+        <a data-target="lexica" class="nav-item" href="/lexica"><span>Kräuterlexikon</span></a>
+        <a data-target="ueber_uns" class="nav-item" href="/ueber_uns"><span>Über uns</span></a>
+      </nav>
     </header>
 
 
-      <section id="kraeuter" class="hidden">
-        <h2>Kräuter</h2>
-        <p>Hier findest du Informationen zu verschiedenen Kräutern.</p>
-      </section>
-      <section id="rezepte" class="hidden">
-        <h2>Rezepte</h2>
-        <p>Hier findest du nützliche Rezepte mit Kräutern.</p>
-      </section>
-      <section id="wissen" class="hidden">
-        <h2>Heilwissen</h2>
-        <p>Hier findest du wissenswerte Informationen über Heilpflanzen.</p>
-      </section>
 
 
     <div class="webpage_head_title"><h1>Willkommen im Kräuterwald</h1></div>
