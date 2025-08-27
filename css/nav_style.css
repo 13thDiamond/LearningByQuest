@@ -53,7 +53,7 @@
 }
 
 /* Mobile (<=768px) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .burger {
     display: flex;
     flex-direction: column;
