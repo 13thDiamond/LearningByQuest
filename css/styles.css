@@ -90,7 +90,7 @@ h2.card_cont_head{
     text-align: center;
     padding: 1em 0px 1em 0px;
     background-color: #2b5000;
-    border-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
     margin: 0px 0px 2em 0px;
 }
 
