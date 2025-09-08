@@ -1,0 +1,110 @@
+@media (max-width: 480px) {
+
+}
+
+:root {
+    --primary-color: #607a00;
+    --submit_button: #0d9900;
+    --font-color: #000000;
+    --background-color: #c5c5c5;
+    --checked-color: #44ff00;
+    
+    --ff-base: Arial, Helvetica, sans-serif;
+}
+
+@layer reset {
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+    body {
+        accent-color: var(--checked-color);
+        margin: 0;
+        font-size: 1rem;
+        font-family: var (--ff-base);
+        background-color: var(--background-color);
+    }
+    h1,
+    h2,
+    p{
+        margin-block: 0;
+    }
+    input,
+    button,
+    textarea{
+        font: inherit;
+    }
+}
+@layer form-layout {
+    .span-all {
+        grid-column: 1 / -1;
+    }
+    
+}
+@layer form {
+    .contactform {
+        padding: 2rem;
+        background-color: var(--background-color);
+        border-radius: 1rem;
+        max-inline-size: 700px;
+        margin-inline: auto;
+    }
+    form {
+        display: grid;
+        gap: 1rem;
+        @media (width > 480px){
+        grid-template-columns: repeat(2, 1fr);
+        }
+        
+        fieldset {
+            padding: 0;
+            border: 0;
+        }
+        .form-group {
+            display: grid;
+        }
+        
+        .form-group:has([required]) label {
+            
+            display: flex;
+            gap: 1ch;
+
+            &::after {
+            content: "*";
+            color: var(--submit_button);
+            }
+        }
+
+         input,
+         textarea {
+            border: 1px solid var(--font-color);
+            border-radius: 6px;
+            padding: 0.75em 1.5em;
+
+            &:focus-visible {
+                outline-color: 2px solid var(--checked-color);
+                outline-offset: 2px;
+            }
+         }
+         
+         .form-group:has([type="checkbox"]) {
+            display: flex;
+            gap: 1ch;;
+         }
+         
+         button {
+            background: var(--submit_button);
+            color: #fff ;
+            border: 0;
+            padding: .75em 1.5em;
+            border-radius: 6px;
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--primary-color);
+                cursor: pointer;
+            }
+         }
+    }
+}

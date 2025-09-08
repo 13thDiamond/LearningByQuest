@@ -1,5 +1,8 @@
+@layer reset, form;
+@import url("form_style.css");
 @import url("nav_style.css");
 @import url("footer_style.css");
+
 
 body{
     background-color: #7e7e7e;
