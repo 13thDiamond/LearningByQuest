@@ -49,6 +49,7 @@
         border-radius: 1rem;
         max-inline-size: 700px;
         margin-inline: auto;
+        margin-bottom: 2rem;
     }
     form {
         display: grid;
